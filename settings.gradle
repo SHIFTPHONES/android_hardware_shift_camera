@@ -1,0 +1,3 @@
+rootProject.name='CameraX-Extensions'
+include ':camerax-extensions'
+include ':sample'
