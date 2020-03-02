@@ -1,0 +1,4 @@
+<permissions>
+    <library name="androidx.camera.extensions.impl"
+            file="/system/framework/androidx.camera.extensions.impl.jar" />
+</permissions>
