@@ -1,0 +1,21 @@
+// CameraX Extension Library
+// ============================================================
+
+java_library {
+    name: "androidx.camera.extensions.impl",
+    installable: true,
+    libs: ["androidx.annotation_annotation"],
+    srcs: [
+        "camerax-extensions/src/main/java/**/*.java",
+    ],
+}
+
+// Permissions and Feature Flags
+// ============================================================
+
+prebuilt_etc {
+    name: "androidx.camera.extensions.impl.xml",
+    sub_dir: "permissions",
+    src: "androidx.camera.extensions.impl.xml",
+    filename_from_src: true,
+}
