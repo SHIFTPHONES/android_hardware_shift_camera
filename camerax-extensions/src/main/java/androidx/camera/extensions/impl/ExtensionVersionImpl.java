@@ -16,6 +16,8 @@
 
 package androidx.camera.extensions.impl;
 
+import android.util.Log;
+
 /**
  * Stub implementation for the extension version check.
  *
@@ -51,6 +53,8 @@ public class ExtensionVersionImpl {
      * should be used.
      */
     public String checkApiVersion(String version) {
-        throw new RuntimeException("Stub, replace with implementation.");
+        Log.e("XXXXX", "FIXME: DO NOT BLINDLY FORWARD CAMERAX VERSION");
+        Log.e("XXXXX", "CameraX Version: " + version);
+        return version;
     }
 }

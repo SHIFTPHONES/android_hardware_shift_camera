@@ -38,7 +38,8 @@ public final class AutoImageCaptureExtenderImpl implements ImageCaptureExtenderI
     @Override
     public boolean isExtensionAvailable(@NonNull String cameraId,
             @Nullable CameraCharacteristics cameraCharacteristics) {
-        throw new RuntimeException("Stub, replace with implementation.");
+        // TODO: implement if you are cool enough
+        return false;
     }
 
     @Override
