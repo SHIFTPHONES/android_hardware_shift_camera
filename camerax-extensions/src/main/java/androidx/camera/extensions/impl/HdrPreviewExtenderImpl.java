@@ -1,6 +1,5 @@
 /*
  * Copyright 2019 The Android Open Source Project
- * Copyright (c) 2019-2020 SHIFT GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,15 +21,10 @@ import android.hardware.camera2.CameraCharacteristics;
 import android.util.Pair;
 import android.util.Size;
 
-import com.shift.cameraximpl.Logger;
-import com.shift.cameraximpl.SettableCaptureStage;
-import com.shift.cameraximpl.ShiftCaptureRequestKey;
-import com.shift.cameraximpl.ShiftMetadata;
-
-import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import java.util.List;
 
 /**
  * Stub implementation for HDR preview use case.
@@ -40,105 +34,64 @@ import androidx.annotation.Nullable;
  * @since 1.0
  */
 public final class HdrPreviewExtenderImpl implements PreviewExtenderImpl {
-    private static final String TAG = HdrPreviewExtenderImpl.class.getSimpleName();
-
     public HdrPreviewExtenderImpl() {
-        // empty
     }
 
     @Override
     public boolean isExtensionAvailable(@NonNull String cameraId,
             @Nullable CameraCharacteristics cameraCharacteristics) {
-        Logger.d(TAG, "isExtensionAvailable(" + cameraId + ", ...)");
-
-        // we only support HDR for cameraId 0 and 1
-        switch (cameraId) {
-            case "0":
-            case "1":
-                return true;
-            default:
-                return false;
-        }
+        // TODO: implement if you are cool enough
+        return false;
     }
 
     @Override
     public void init(String cameraId, CameraCharacteristics cameraCharacteristics) {
-        Logger.d(TAG, "enableExtension");
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public CaptureStageImpl getCaptureStage() {
-        Logger.d(TAG, "getCaptureStage");
-
-        final SettableCaptureStage captureStage = new SettableCaptureStage(0);
-        captureStage
-                .addCaptureRequestParameters(ShiftCaptureRequestKey.SESSION_OPERATION_MODE, ShiftMetadata.Session.TYPE_HDR)
-                ;
-
-        return captureStage;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public ProcessorType getProcessorType() {
-        Logger.d(TAG, "getProcessorType");
-
-        return ProcessorType.PROCESSOR_TYPE_NONE;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public ProcessorImpl getProcessor() {
-        Logger.d(TAG, "getProcessor");
-
-        return null;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public void onInit(String cameraId, CameraCharacteristics cameraCharacteristics,
             Context context) {
-        Logger.d(TAG, "onInit");
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public void onDeInit() {
-        Logger.d(TAG, "onDeInit");
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public CaptureStageImpl onPresetSession() {
-        Logger.d(TAG, "onPresetSession");
-
-        final SettableCaptureStage presetSessionStage = new SettableCaptureStage(0);
-        presetSessionStage
-                .addCaptureRequestParameters(ShiftCaptureRequestKey.SESSION_OPERATION_MODE, ShiftMetadata.Session.TYPE_HDR)
-                ;
-
-        return presetSessionStage;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public CaptureStageImpl onEnableSession() {
-        Logger.d(TAG, "onEnableSession");
-
-        final SettableCaptureStage enableSessionStage = new SettableCaptureStage(0);
-        enableSessionStage
-                .addCaptureRequestParameters(ShiftCaptureRequestKey.SESSION_OPERATION_MODE, ShiftMetadata.Session.TYPE_HDR)
-                ;
-
-        return enableSessionStage;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public CaptureStageImpl onDisableSession() {
-        Logger.d(TAG, "onDisableSession");
-
-        return null;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 
     @Override
     public List<Pair<Integer, Size[]>> getSupportedResolutions() {
-        Logger.d(TAG, "getSupportedResolutions");
-
-        // we support any resolution
-        return null;
+        throw new RuntimeException("Stub, replace with implementation.");
     }
 }

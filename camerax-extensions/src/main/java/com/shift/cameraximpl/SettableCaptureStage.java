@@ -38,9 +38,8 @@ public final class SettableCaptureStage implements CaptureStageImpl {
         this.mId = id;
     }
 
-    public SettableCaptureStage addCaptureRequestParameters(CaptureRequest.Key requestKey, Object requestObject) {
+    public void addCaptureRequestParameters(CaptureRequest.Key requestKey, Object requestObject) {
         this.mCaptureRequestKeyValueMap.put(requestKey, requestObject);
-        return this;
     }
 
     @Override
