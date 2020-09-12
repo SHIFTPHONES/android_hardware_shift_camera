@@ -1,3 +1,8 @@
-rootProject.name='CameraX-Extensions'
+include ':camera-common'
+project(':camera-common').projectDir = new File(rootDir, 'camera/common')
+
 include ':camerax-extensions'
-include ':sample'
+project(':camerax-extensions').projectDir = new File(rootDir, 'camerax/extensions/')
+
+include ':camerax-extensions-sample'
+project(':camerax-extensions-sample').projectDir = new File(rootDir, 'camerax/sample/')
