@@ -15,25 +15,25 @@ java_library {
 // CameraX Extension Library
 // ============================================================
 
-java_library {
-    name: "androidx.camera.extensions.impl",
-    installable: true,
-    static_libs: [
-        "com.shift.camera",
-    ],
-    libs: [
-        "androidx.annotation_annotation",
-    ],
-    srcs: [
-        "camerax/extensions/src/main/java/**/*.java",
-    ],
-}
+//java_library {
+//    name: "androidx.camera.extensions.impl",
+//    installable: true,
+//    static_libs: [
+//        "com.shift.camera",
+//    ],
+//    libs: [
+//        "androidx.annotation_annotation",
+//    ],
+//    srcs: [
+//        "camerax/extensions/src/main/java/**/*.java",
+//    ],
+//}
 
 // Permissions and Feature Flags
 // ============================================================
 
-prebuilt_etc {
-    name: "androidx.camera.extensions.impl.xml",
-    sub_dir: "permissions",
-    src: "camerax/androidx.camera.extensions.impl.xml",
-}
+//prebuilt_etc {
+//    name: "androidx.camera.extensions.impl.xml",
+//    sub_dir: "permissions",
+//    src: "camerax/androidx.camera.extensions.impl.xml",
+//}
